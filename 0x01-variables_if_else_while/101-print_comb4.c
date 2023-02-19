@@ -1,26 +1,33 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - Prints 3 combination of numbers
- *
- * Return: Always (Success
- */
+* main - Entyr point
+* Description: prints two digits combination
+* Return: Always 0 (success)
+*/
 int main(void)
 {
-	int c, i, k;
-	for (c = '0'; c <= '9'; c++)
-	{
-		 for (i = '0'; i <= '9'; i++)
-		 {
-			  for (k = '0'; k <= '9'; k++)
-			  {
-				   if (c < i && i < k)
-				   {
-					   putchar(c);
-					   putchar(i);
-					   putchar(k);
+	int a, b, c;
 
-					   if (c != '7')
-					   {
-						   putchar(',');
-						   putchar(' ');
-					   }
+	for (a = 0; a <= 7; a++)
+	{
+		for (b = a + 1; b <= 8; b++)
+		{
+			for (c = b + 1; c <= 9; c++)
+			{
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(c + '0');
+
+				if (a < 7 || b < 8 || c < 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+
+	return (0);
+}
