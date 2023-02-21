@@ -1,40 +1,34 @@
 #include <stdio.h>
-
 /**
- * main - prints all possible combinations of two two-digit numbers
- *
- * Return: Always 0.
+ * main - Entry point
+ * Description: A program that prints all possible combinations
+ * Numbers must be separated by ,, followed by a space
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, j, k, l;
+	 int i, j;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 99; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (j = i + 1; j < 100; j++)
 		{
-			for (k = 0; k <= 9; k++)
+			if (i != j)
 			{
-				for (l = 0; l <= 9; l++)
+				putchar((i / 10) + '0');
+				putchar((i % 10) + '0');
+				putchar(' ');
+				putchar((j / 10) + '0');
+				putchar((j % 10) + '0');
+				if (i == 98 && j == 99)
+					continue;
 				{
-					if ((i < k) || ((i == k) && (j < l)))
-					{
-						putchar(i + '0');
-						putchar(j + '0');
-						putchar(' ');
-						putchar(k + '0');
-						putchar(l + '0');
-					if (i != 9 || j != 8 || k != 9 || l != 9)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
-
