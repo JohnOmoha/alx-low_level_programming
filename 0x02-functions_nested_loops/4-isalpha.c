@@ -3,7 +3,8 @@
 /**
  * _isalpha - check for char alphabet
  * @c: the char to be checked
- * Return: 1 if char is letter lowercase or uppercase, 0 otherwise
+ *
+ * Return: 1 i char is letter lower or upper, 0 otherwise
  */
 
 int _isalpha(int c)
@@ -13,3 +14,4 @@ int _isalpha(int c)
 	else
 		return (0);
 }
+
