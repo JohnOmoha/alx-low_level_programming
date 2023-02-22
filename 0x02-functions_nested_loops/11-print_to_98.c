@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * main - check the code
  * user input's number prints to 98, regardless < 98 or > 98
