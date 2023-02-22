@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - prints every minute of the day of Jack Bauer
- * Return: ...
+ * Return: 24 hour clock line by line
  */
 
 void jack_bauer(void)
@@ -13,15 +13,13 @@ void jack_bauer(void)
 	{
 		for (b = 0; b < 60; b++)
 		{
-					{
-						_putchar((a / 10) + '0');
-						_putchar((b % 10) + '0');
-						_putchar(':');
-						_putchar(c + '0');
-						_putchar(d + '0');
-						_putchar('\n');
-					}
-				}
+			{
+				_putchar((a / 10) + '0');
+				_putchar((b % 10) + '0');
+				_putchar(':');
+				_putchar(b + '0');
+				_putchar(b + '0');
+				_putchar('\n');
 			}
 		}
 	}
