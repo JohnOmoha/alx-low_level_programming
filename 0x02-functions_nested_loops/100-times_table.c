@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_times_table -> prints times tale for numbers
- * @n: an input intger vale
- * Return: Nothing
+ * print_times_table -> prints times table for numbers
+ * @n: an input intger value
+ * Return: 0
  */
 void print_times_table(int n)
 {
