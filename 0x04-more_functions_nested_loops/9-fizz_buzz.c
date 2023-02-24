@@ -1,6 +1,6 @@
 /*
  * File: 9-fizz_buzz.c
- * Auth: Omoha John
+ * By: Omoha John
  */
 
 #include <stdio.h>
