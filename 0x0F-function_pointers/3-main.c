@@ -4,6 +4,7 @@
 #include <string.h>
 
 /**
+ * By Omoha F.J
  * main - program to perform simple operations
  * @argc: argument count
  * @argv: array of arguments
