@@ -1,40 +1,30 @@
-#include "function_pointers.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
+
 /**
- * By Omoha John
- * main - Prints the result of simple operations.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
- *
- * Return: Always 0.
+ * get_op_func -  the function that selects the correct function
+ * to perform the operation asked by the user.
+ * @s: An input char pointer operator passed as argument
+ * Return: a pointer to the function that corresponds to the
+ * operator given as a parameter.
  */
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int (*get_op_func(char *s))(int, int)
 {
-	int num1, num2;
-	char *op;
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i = 0;
 
-	if (argc != 4)
+	while (i < 5)
 	{
-		printf("Error\n");
-		exit(98);
+		if (*(ops[i]).op == *s && *(s + 1) == '\0')
+			return (ops[i].f);
+		i++;
 	}
-	num1 = atoi(argv[1]);
-	op = argv[2];
-	num2 = atoi(argv[3]);
-	if (get_op_func(op) == NULL || op[1] != '\0')
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if ((*op == '/' && num2 == 0) ||
-			(*op == '%' && num2 == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	printf("%d\n", get_op_func(op)(num1, num2));
-	return (0);
+	return (NULL);
 }
-
