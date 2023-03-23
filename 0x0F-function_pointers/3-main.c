@@ -1,6 +1,5 @@
 #include "3-calc.h"
 
-
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
@@ -9,6 +8,7 @@ int op_mod(int a, int b);
 
 
 /**
+ * By omoha John
  * op_add - Returns the sum of two numbers.
  * @a: The first number.
  * @b: The second number.
