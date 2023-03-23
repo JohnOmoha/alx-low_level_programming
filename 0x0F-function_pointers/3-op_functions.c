@@ -2,7 +2,7 @@
 #include "3-calc.h"
 
 /**
- * By Omoha John
+ * By Omoha F. John
  * get_op_func -  the function that selects the correct function
  * to perform the operation asked by the user.
  * @s: An input char pointer operator passed as argument
